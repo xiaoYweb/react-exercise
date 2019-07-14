@@ -5,16 +5,15 @@ import action from '../../store/action';
 class VoteFooter extends Component {
     constructor(props,context) {
         super(props)
-        console.log('VoteFooter', context)
+        console.log('constructor VoteFooter', this)
     }
     render() {
         console.log('render footer', this.props)
         const {support, oppose} = this.props;
         return (
             <div className={'panel-footer'}>
-                <button className={'brn btn-success'} style={{marginRight: '10px'}} onClick={() => {support()}}>支持</button>
-                
-                <button className={'brn btn-danger'} onClick={() => {oppose()}}>反对</button>
+                <button className={'brn btn-success'} style={{marginRight: '10px'}} onClick={() => {support('support111')}}>支持</button>
+                <button className={'brn btn-danger'} onClick={() => {oppose('oppose111')}}>反对</button>
             </div>
         );
     }

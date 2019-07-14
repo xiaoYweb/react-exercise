@@ -1,14 +1,16 @@
 import type from '../type';
 const {vote: {VOTE_SUPPORT, VOTE_OPPOSE}} = type;
 const vote = {
-    support () {
+    support (params) {
         return {
-            type: VOTE_SUPPORT
+            type: VOTE_SUPPORT,
+            params
         }
     },
-    oppose () {
+    oppose (params) {
         return {
-            type: VOTE_OPPOSE
+            type: VOTE_OPPOSE,
+            params
         }
     }
 }
